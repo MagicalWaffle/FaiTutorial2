@@ -1,0 +1,48 @@
+﻿@model FAITutorial2.Models.Punetori
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Punetori</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Emri)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Emri)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mbiemri)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mbiemri)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gjinia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gjinia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumriPersonal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumriPersonal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Roli)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Roli.RoliId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PunetoriId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

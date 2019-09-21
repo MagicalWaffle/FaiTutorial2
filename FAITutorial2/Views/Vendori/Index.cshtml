@@ -1,0 +1,53 @@
+﻿@model IEnumerable<FAITutorial2.Models.Vendori>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Emri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lokacioni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrKontaktues)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lokacioni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NrKontaktues)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BankAccount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VendoriId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VendoriId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VendoriId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
