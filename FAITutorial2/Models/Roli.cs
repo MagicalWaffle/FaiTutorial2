@@ -11,7 +11,7 @@ namespace FAITutorial2.Models
         }
 
         public int RoliId { get; set; }
-        public string Roli1 { get; set; }
+        public string Role { get; set; }
 
         public ICollection<Punetori> Punetori { get; set; }
     }

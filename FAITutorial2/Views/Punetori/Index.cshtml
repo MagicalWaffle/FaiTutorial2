@@ -4,11 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Punetoret</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
-</p>
+    <a class="btn btn-primary " asp-action="Create">Regjistro</a>
+</p>    
 <table class="table">
     <thead>
         <tr>
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.Roli.RoliId)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PunetoriId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PunetoriId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PunetoriId">Delete</a>
+                <a class="btn btn-info btn-sm" asp-action="Edit" asp-route-id="@item.PunetoriId">Edit</a> |
+                <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.PunetoriId">Details</a> |
+                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.PunetoriId">Delete</a>
             </td>
         </tr>
 }

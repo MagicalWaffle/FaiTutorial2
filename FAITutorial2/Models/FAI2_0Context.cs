@@ -80,8 +80,8 @@ namespace FAITutorial2.Models
             {
                 entity.Property(e => e.RoliId).HasColumnName("RoliID");
 
-                entity.Property(e => e.Roli1)
-                    .HasColumnName("Roli")
+                entity.Property(e => e.Role)
+                    .HasColumnName("Roli")  
                     .HasMaxLength(30)
                     .IsUnicode(false);
             });
