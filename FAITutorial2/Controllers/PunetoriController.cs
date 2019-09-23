@@ -20,12 +20,13 @@ namespace FAITutorial2.Controllers
         }
 
         // GET: Punetori
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var fAI2_0Context = _context.Punetori.Include(p => p.Roli);
             return View(await fAI2_0Context.ToListAsync());
         }
-
+        [Authorize]
         // GET: Punetori/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -44,7 +45,7 @@ namespace FAITutorial2.Controllers
 
             return View(punetori);
         }
-
+        [Authorize]
         // GET: Punetori/Create
         [Authorize]
         public IActionResult Create()
